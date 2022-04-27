@@ -35,7 +35,13 @@ const Button: FC<ButtonProps> = ({
   // );
 
   return (
-    <StyledButton type={type} onClick={onClick} primary={primary} disabled={disabled} size={size} {...props}>
+    <StyledButton
+      type={type}
+      onClick={onClick}
+      primary={primary}
+      disabled={disabled}
+      size={size}
+      {...props}>
       {text}
     </StyledButton> 
   );

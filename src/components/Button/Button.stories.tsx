@@ -12,11 +12,26 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
+// templaet of how args map to rendering which is then reused for various stories
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+// Primary story
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   disabled: false,
   text: 'Primary',
+};
+
+// Secondary story
+export const Secondary = Template.bind({});
+Secondary.args = {
+  text: 'Secondary',
+};
+
+// Disabled story
+export const Disabled = Template.bind({});
+Disabled.args = {
+  text: 'Disabled',
+  disabled: true
 };
