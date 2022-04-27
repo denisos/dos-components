@@ -1,30 +1,35 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
-// import { ButtonProps } from './Button.types';
+import { ButtonProps } from './Button.types';
 
-export interface ButtonProps {
-  className?: string;
-  children: string;
-  disabled?: boolean,
-  text?: string,
-  primary?: boolean
-  size?: "small" | "medium" | "large",
-  type?: 'button' | 'reset' | 'submit';
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
+
+const sizeStyled = {
+  small: css`min-width: 60px; padding: 6px 18px; font-size: 12px;`,
+  medium: css`min-width: 80px; padding: 10px 34px; font-size: 16px;`,
+  large: css`min-width: 100px; padding: 10px 34px; font-size: 18px;`
 }
 
 const StyledButton = styled.button<ButtonProps>`
-  padding: 10px;
+  color: ${props => props.primary ? "#fff" : "#000"};
+  cursor: pointer;
   border-radius: 4px;
-  background-color: red;
-  color: white;
+  border: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: ${props => props.primary ? "#5B5BEE" : "#fff"};
+  
+  &:hover, &:active {
+    background-color: ${props => props.primary ? "#8787F0" : "#5B5BEE"};
+  }
+
+  ${props => sizeStyled[props.size ?? 'medium']}
 `;
 
 const Button: FC<ButtonProps> = ({ 
   disabled,
-  size,
-  primary,
+  size = 'medium',
+  primary = false,
   text,
   type = 'button',
   onClick,

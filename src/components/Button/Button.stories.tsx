@@ -26,7 +26,7 @@ Primary.args = {
 // Secondary story
 export const Secondary = Template.bind({});
 Secondary.args = {
-  text: 'Secondary',
+  text: 'Secondary'
 };
 
 // Disabled story
@@ -34,4 +34,20 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   text: 'Disabled',
   disabled: true
+};
+
+// Small story
+export const Small = Template.bind({});
+Small.args = {
+  primary: true,
+  text: 'Primary Small',
+  size: 'small'
+};
+
+// Large story
+export const Large = Template.bind({});
+Large.args = {
+  primary: true,
+  text: 'Primary Large',
+  size: 'large'
 };
