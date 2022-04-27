@@ -25,6 +25,8 @@ Technology used
 
 
 ### run storyboard
+`yarn storybook`
+
 
 
 ## deploy to npm

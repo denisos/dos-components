@@ -1,7 +1,18 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import { ButtonProps } from './Button.types';
+// import { ButtonProps } from './Button.types';
+
+export interface ButtonProps {
+  className?: string;
+  children: string;
+  disabled?: boolean,
+  text?: string,
+  primary?: boolean
+  size?: "small" | "medium" | "large",
+  type?: 'button' | 'reset' | 'submit';
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+}
 
 const StyledButton = styled.button<ButtonProps>`
   padding: 10px;
@@ -15,11 +26,16 @@ const Button: FC<ButtonProps> = ({
   size,
   primary,
   text,
+  type = 'button',
   onClick,
   ...props
 }) => {
+  // const btnChildren = (
+  //   <span className="btnChildren">{children}</span>
+  // );
+
   return (
-    <StyledButton type="button" onClick={onClick} primary={primary} disabled={disabled} size={size} {...props}>
+    <StyledButton type={type} onClick={onClick} primary={primary} disabled={disabled} size={size} {...props}>
       {text}
     </StyledButton> 
   );
