@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components';
 
 import { ButtonProps } from './Button.types';
 
+// consider putting styles in separate ts file:
+// https://stackoverflow.com/questions/56136220/multiple-prop-checks-in-styled-components
 
 const sizeStyled = {
   small: css`min-width: 60px; padding: 6px 18px; font-size: 12px;`,
@@ -18,10 +20,15 @@ const StyledButton = styled.button<ButtonProps>`
   white-space: nowrap;
   vertical-align: middle;
   background-color: ${props => props.primary ? "#5B5BEE" : "#fff"};
-  
+  border: ${props => props.primary ? "none" : "1px solid #000"};
+  opacity: ${props => props.disabled ? 0.5 : 1};
+  cursor: ${props => props.disabled ? "default" : "hand"};
+
   &:hover, &:active {
-    background-color: ${props => props.primary ? "#8787F0" : "#5B5BEE"};
+    background-color: ${props => props.primary ? "#8787F0"
+    : props.disabled ? "transparent" : "#5B5BEE"};
   }
+
 
   ${props => sizeStyled[props.size ?? 'medium']}
 `;
