@@ -20,19 +20,19 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   disabled: false,
-  text: 'Primary',
+  children: 'Primary',
 };
 
 // Secondary story
 export const Secondary = Template.bind({});
 Secondary.args = {
-  text: 'Secondary'
+  children: 'Secondary'
 };
 
 // Disabled story
 export const Disabled = Template.bind({});
 Disabled.args = {
-  text: 'Disabled',
+  children: 'Disabled',
   disabled: true
 };
 
@@ -40,7 +40,7 @@ Disabled.args = {
 export const Small = Template.bind({});
 Small.args = {
   primary: true,
-  text: 'Primary Small',
+  children: 'Primary Small',
   size: 'small'
 };
 
@@ -48,6 +48,9 @@ Small.args = {
 export const Large = Template.bind({});
 Large.args = {
   primary: true,
-  text: 'Primary Large',
+  children: 'Primary Large',
   size: 'large'
 };
+
+// pass element as children
+export const ComplexChild = () => <Button primary><span>Complex Btn</span></Button>;

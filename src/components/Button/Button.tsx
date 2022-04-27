@@ -35,9 +35,9 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button: FC<ButtonProps> = ({ 
   disabled,
+  children,
   size = 'medium',
   primary = false,
-  text,
   type = 'button',
   onClick,
   ...props
@@ -49,12 +49,12 @@ const Button: FC<ButtonProps> = ({
   return (
     <StyledButton
       type={type}
-      onClick={onClick}
       primary={primary}
       disabled={disabled}
       size={size}
+      onClick={onClick}
       {...props}>
-      {text}
+      {children}
     </StyledButton> 
   );
 }
