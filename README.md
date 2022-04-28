@@ -49,9 +49,10 @@ import { Button } from 'dos-components';
 * in root folder `npm publish`
 
 To update on npm 
-* run build then
-* run `npm version major` or  `npm version minor` or `npm version patch`
+* `npm version major` or  `npm version minor` or `npm version patch`
+* `yarn run publish`  builds and publishes
 
+checkout package `npm pack`
 
 ### to dos
 * add more components and tests
