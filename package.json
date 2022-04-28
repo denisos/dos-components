@@ -1,8 +1,8 @@
 {
   "name": "dos-components",
   "version": "0.0.1",
-  "description": "custom component library for dos apps",
-  "author": "denisos",
+  "description": "custom component library created by denisos",
+  "author": "github.com/denisos",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

@@ -11,7 +11,23 @@ Technology used
 * jest
 * rollup - module bundler
 
-## Install and run
+## Using
+
+### Install 
+`yarn add dos-components`
+
+### usage
+```
+import { Button } from 'dos-components';
+
+
+<Button primary>Ok</Button>
+<Button primary disabled>Ok disabled</Button>
+<Button size="small">Ok small</Button>
+
+```
+
+## developing
 
 ### install
 `nvm use`
@@ -28,6 +44,14 @@ Technology used
 `yarn storybook`
 
 
-
 ## deploy to npm
+* login to npm
+* in root folder `npm publish`
 
+To update on npm run `npm version major` or  `npm version minor` or `npm version patch`
+
+
+### to dos
+* add more components and tests
+* define colors etc. in common json file, import and use. use something like style-dictionary to manage the tokens
+*
