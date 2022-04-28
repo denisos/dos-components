@@ -48,7 +48,9 @@ import { Button } from 'dos-components';
 * login to npm
 * in root folder `npm publish`
 
-To update on npm run `npm version major` or  `npm version minor` or `npm version patch`
+To update on npm 
+* run build then
+* run `npm version major` or  `npm version minor` or `npm version patch`
 
 
 ### to dos

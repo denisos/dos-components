@@ -6,6 +6,12 @@
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "test": "jest"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@rollup/plugin-commonjs": "^22.0.0",
@@ -43,11 +49,5 @@
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test": "jest"
   }
 }
